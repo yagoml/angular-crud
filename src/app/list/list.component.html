@@ -1,0 +1,33 @@
+<p class="page-title">
+    <strong>Base de Clientes</strong> | <a [routerLink]="['/add']" title="Adicionar Novo Cliente na Base">Novo Cliente</a>
+</p>
+
+<div class="table-responsive">
+    <table class="table table-striped customers-table">
+        <thead>
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>Telefone</th>
+            <th>Data Nasc.</th>
+            <th>Endereço</th>
+            <th>Veículo</th>
+            <th>Ações</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let client of customers" [id]="client.id">
+                <td>{{ client.name }}</td>
+                <td>{{ maskCpf(client.cpf) }}</td>
+                <td>{{ maskPhone(client.phone) }}</td>
+                <td>{{ maskDataBR(client.birthday) }}</td>
+                <td>{{ client.address }}</td>
+                <td>{{ client.vehicleText || 'Carregando...' }}</td>
+                <td><a href="javascript:" [routerLink]="['/edit', client.id]">Editar</a> | <a href="javascript:" (click)="delete(client.id)">Excluir</a></td>
+            </tr>
+            <tr *ngIf="!customers.length">
+                <td colspan="7" style="text-align: center;">
+                    Nenhum cliente cadastrado.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

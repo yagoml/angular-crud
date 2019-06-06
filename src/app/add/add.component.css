@@ -1,0 +1,35 @@
+.form-cliente label {
+    display: block;
+    margin-bottom: 0;
+}
+
+.form-line {
+    margin: 10px auto;
+    width: 40%;
+}
+
+.form-line .alert {
+    padding: 0 10px;
+    width: fit-content;
+}
+
+.container-client-form input,
+.container-client-form select {
+    width: 100%;
+}
+
+button {
+    margin-right: 5px;
+}
+
+@media (max-width: 1024px) {
+    .form-line {
+        width: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-line {
+        width: 100%;
+    }
+}

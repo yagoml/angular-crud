@@ -1,0 +1,111 @@
+<div class="container-fluid container-client-form">
+    <p class="page-title">
+        <strong><a [routerLink]="['']" title="Voltar para Base de Clientes">Base de Clientes</a> | {{ title }}</strong>
+    </p>
+
+    <form [formGroup]="clientForm" (ngSubmit)="onSubmit(clientForm.value)" class="form-cliente">
+        <div class="form-group form-line">
+            <label for="name">Nome *</label>
+            <input type="text" formControlName="name" class="form-control">
+
+            <div *ngIf="formValidation.name" class="alert alert-danger">
+                <div *ngIf="formValidation.name == 'required'">
+                    Preencha o campo Nome.
+                </div>
+                <div *ngIf="formValidation.name == 'minlength'">
+                    Nome deve conter no mínimo 4 caracteres.
+                </div>
+                <div *ngIf="formValidation.name == 'invalid'">
+                    Nome inválido.
+                </div>
+            </div>
+        </div>
+
+        <div class="form-line">
+            <label for="cpf">CPF *</label>
+            <input type="text" formControlName="cpf" mask="000.000.000-00" class="form-control">
+
+            <div *ngIf="formValidation.cpf" class="alert alert-danger">
+                <div *ngIf="formValidation.cpf == 'required'">
+                    Preencha o campo CPF.
+                </div>
+                <div *ngIf="formValidation.cpf == 'invalid'">
+                    CPF Inválido.
+                </div>
+            </div>
+        </div>
+
+        <div class="form-line">
+            <label for="phone">Telefone *</label>
+            <input type="text" formControlName="phone" mask="(00) 00000-0009" class="form-control">
+
+            <div *ngIf="formValidation.phone" class="alert alert-danger">
+                <div *ngIf="formValidation.phone == 'required'">
+                    Preencha o campo Telefone.
+                </div>
+                <div *ngIf="formValidation.phone == 'invalid'">
+                    Telefone Inválido.
+                </div>
+            </div>
+        </div>
+
+        <div class="form-line">
+            <label for="birthday">Data de Nascimento *</label>
+            <input type="date" formControlName="birthday" class="form-control">
+
+            <div *ngIf="formValidation.birthday" class="alert alert-danger">
+                <div *ngIf="formValidation.birthday == 'required'">
+                    Preencha o campo Data de Nascimento.
+                </div>
+                <div *ngIf="formValidation.birthday == 'invalid'">
+                    Data de Nascimento Inválida.
+                </div>
+            </div>
+        </div>
+
+        <div class="form-line">
+            <label for="address">Endereço *</label>
+            <input type="text" formControlName="address" class="form-control">
+
+            <div *ngIf="formValidation.address" class="alert alert-danger">
+                <div *ngIf="formValidation.address == 'required'">
+                    Preencha o campo Endereço.
+                </div>
+                <div *ngIf="formValidation.address == 'invalid'">
+                    Endereço Inválido.
+                </div>
+            </div>
+        </div>
+
+        <div class="form-line">
+            <label for="vehicleBrand">Marca Veículo *</label>
+            <select formControlName="vehicleBrand" style="min-width: 168px;" (ngModelChange)="onBrandChange($event)" class="form-control">
+                <option *ngFor="let brand of vehicleBrands" [value]="brand.codigo">{{ brand.nome }}</option>
+            </select>
+
+            <div *ngIf="formValidation.vehicleBrand" class="alert alert-danger">
+                <div *ngIf="formValidation.vehicleBrand == 'required'">
+                    Selecione a Marca do Veículo.
+                </div>
+            </div>
+        </div>
+
+        <div class="form-line">
+            <label for="vehicleModel">Modelo Veículo *</label>
+            <select formControlName="vehicleModel" style="min-width: 380px;" class="form-control">
+                <option *ngFor="let model of vehicleModels" [value]="model.codigo">{{ model.nome }}</option>
+            </select>
+
+            <div *ngIf="formValidation.vehicleModel" class="alert alert-danger">
+                <div *ngIf="formValidation.vehicleModel == 'required'">
+                    Selecione o Modelo do Veículo.
+                </div>
+            </div>
+        </div>
+
+        <div class="form-line" style="margin-top: 20px; text-align: center;">
+            <button class="btn btn-danger" type="reset" [routerLink]="['']">Cancelar</button>
+            <button class="btn btn-success" type="submit">Salvar</button>
+        </div>
+    </form>
+</div>
