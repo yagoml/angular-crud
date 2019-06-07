@@ -1,6 +1,8 @@
-# Angular CRUD (PT-BR)
-CRUD simples desenvolvido com o framework Angular 7.
+## Angular CRUD (PT-BR)
+CRUD básico desenvolvido para testes com o framework Angular 7.
+
 Armazenamento no localstorage.
+
 Possui sistema de cache dos dados da API de veículos.
 
 ## Manual do Usuário
@@ -25,7 +27,7 @@ Para excluir um cliente, clicar no link `Excluir`, que fica na coluna `Ações`,
 
 _________________________________________________________________________________________________________
 
-# Angular CRUD (EN-US)
+## Angular CRUD (EN-US)
 Simple CRUD developed with the Angular framework 7.
 Storage in localstorage.
 Features vehicle API Data Cache System
