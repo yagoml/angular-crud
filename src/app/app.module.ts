@@ -12,28 +12,25 @@ import { CustomersService } from './services/customers.service';
 
 // Biblioteca p/ máscaras
 import { NgxMaskModule, IConfig } from 'ngx-mask';
+import { TopMenuComponent } from './top-menu/top-menu.component';
 export let options: Partial<IConfig> | (() => Partial<IConfig>);
 
 @NgModule({
-	declarations: [
-		AppComponent,
-		ListComponent,
-		AddComponent
-	],
-	imports: [
-		BrowserModule,
-		FormsModule,
-		ReactiveFormsModule,
-		HttpModule,
-		HttpClientModule,
-		NgxMaskModule.forRoot(options),
-		RouterModule.forRoot([
-			{ path: '', component: ListComponent },
-			{ path: 'add', component: AddComponent },
-			{ path: 'edit/:id', component: AddComponent }
-		])
-	],
-	providers: [CustomersService],
-	bootstrap: [AppComponent]
+  declarations: [AppComponent, ListComponent, AddComponent, TopMenuComponent],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpModule,
+    HttpClientModule,
+    NgxMaskModule.forRoot(options),
+    RouterModule.forRoot([
+      { path: '', component: ListComponent },
+      { path: 'add', component: AddComponent },
+      { path: 'edit/:id', component: AddComponent }
+    ])
+  ],
+  providers: [CustomersService],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}

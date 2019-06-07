@@ -1,9 +1,5 @@
-<p class="page-title">
-    <strong>Base de Clientes</strong> | <a [routerLink]="['/add']" title="Adicionar Novo Cliente na Base">Novo Cliente</a>
-</p>
-
 <div class="table-responsive">
-    <table class="table table-striped customers-table">
+    <table class="table table-striped table-hover customers-table">
         <thead>
             <th>Nome</th>
             <th>CPF</th>
@@ -16,9 +12,9 @@
         <tbody>
             <tr *ngFor="let client of customers" [id]="client.id">
                 <td>{{ client.name }}</td>
-                <td>{{ maskCpf(client.cpf) }}</td>
-                <td>{{ maskPhone(client.phone) }}</td>
-                <td>{{ maskDataBR(client.birthday) }}</td>
+                <td>{{ helperService.maskCpf(client.cpf) }}</td>
+                <td>{{ helperService.maskPhone(client.phone) }}</td>
+                <td>{{ helperService.maskDataBR(client.birthday) }}</td>
                 <td>{{ client.address }}</td>
                 <td>{{ client.vehicleText || 'Carregando...' }}</td>
                 <td><a href="javascript:" [routerLink]="['/edit', client.id]">Editar</a> | <a href="javascript:" (click)="delete(client.id)">Excluir</a></td>

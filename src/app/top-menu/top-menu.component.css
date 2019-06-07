@@ -1,0 +1,20 @@
+.top-menu {
+  font-size: 18px;
+  background-color: #ff704d;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 15px;
+  color: black;
+}
+
+.top-menu a {
+  color: black;
+}
+
+.top-menu a:hover {
+  color: #0000ff;
+}
+
+.top-menu .selected {
+  text-decoration: underline;
+}
