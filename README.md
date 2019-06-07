@@ -1,60 +1,68 @@
 ## Angular CRUD (PT-BR)
-CRUD básico desenvolvido para testes com o framework Angular 7.
+CRUD Web App básico desenvolvido para testes com o framework Angular 7.\
+Cacheamento dos dados de veículos de API externa.\
+Armazenamento de dados no localstorage do browser.\
+App testado no google chrome e edge.
 
-Armazenamento no localstorage.
-
-Possui sistema de cache dos dados da API de veículos.
-
-## Manual do Usuário
+## Manual de Funcionalidades
 
 ### Base de Clientes
+Rota: **/** \
 Aqui é mostrado em tabela os clientes cadastrados na base.
 
 ### Novo Cliente
+Rota: **/add** \
 Formulário para adicionar cliente.
-Para adicionar, clicar no link `Novo Cliente` ao lado do título `Base de Clientes`.
-Para voltar à Base de Clientes (página inicial), clicar no título `Base de Clientes`, ou no botão `Cancelar`.
+Para adicionar, clicar no link `Novo Cliente` ao lado do título `Base de Clientes`. \
+Para voltar à Base de Clientes (página inicial), clicar no título `Base de Clientes`, ou no botão `Cancelar`. \
 Caso existam dados inválidos ou não preenchido, será alertado abaixo de cada campo inválido.
 
 ### Editar Cliente
+Rota: **/edit/:clientID** \
 Formulário de edição de cliente cadastrado.
-Para editar, clicar no link `Editar`, que fica na coluna `Ações`, na sua respectiva linha da tabela.
-Para voltar à Base de Clientes (página inicial), clicar no título `Base de Clientes`, ou no botão `Cancelar`.
+Para editar, clicar no link `Editar`, que fica na coluna `Ações`, na sua respectiva linha da tabela. \
+Para voltar à Base de Clientes (página inicial), clicar no título `Base de Clientes`, ou no botão `Cancelar`. \
 Caso existam dados inválidos ou não preenchido, será alertado abaixo de cada campo inválido.
 
 ### Excluir Cliente
+Rota: **/** \
 Para excluir um cliente, clicar no link `Excluir`, que fica na coluna `Ações`, na sua respectiva linha da tabela, confirmar a exclusão apertando `OK` no popup de confirmação.
 
 _________________________________________________________________________________________________________
 
 ## Angular CRUD (EN-US)
-Simple CRUD developed with the Angular framework 7.
-Storage in localstorage.
-Features vehicle API Data Cache System
+Basic CRUD Web App developed for testing with the Angular framework 7. \
+Caching of external API vehicle data.
+Data storage in browser location. \
+App tested on google chrome and edge.
 
-## User manual
+## Features Manual
 
 ### Customer Base
+Route: **/** \
 Here the clients registered in the database are shown in the table.
 
 ### New customer
+Route: **/add** \
 Form to add client.
-To add, click the `Novo Cliente` link next to the `Base de Clientes` heading.
-To return to the Client Base (home page) click on the heading `Base de Clientes` or the `Cancelar` button.
+To add, click the `Novo Cliente` link next to the `Base de Clientes` heading. \
+To return to the Client Base (home page) click on the heading `Base de Clientes` or the `Cancelar` button. \
 If there is invalid or unfilled data, you will be alerted below each invalid field.
 
 ### Edit Client
+Route: **/edit/clientID** \
 Registered customer registration form.
-To edit, click on the `Editar` link, which is in the `Ações` column, in its respective row of the table.
-To return to the Client Base (home page) click on the heading `Base de Clientes` or the `Cancelar` button.
+To edit, click on the `Editar` link, which is in the `Ações` column, in its respective row of the table. \
+To return to the Client Base (home page) click on the heading `Base de Clientes` or the `Cancelar` button. \
 If there is invalid or unfilled data, you will be alerted below each invalid field.
 
 ### Delete Customer
+Route: **/** \
 To delete a client, click on the `Excluir` link in the `Ações` column in its table row, confirm the deletion by pressing `OK` in the confirmation popup.
 
 _________________________________________________________________________________________________________
 
-# Project Inicialization
+# Run App
 
 1. Go to project folder and install dependencies:
 
@@ -111,16 +119,15 @@ Task automation is based on [NPM scripts](https://docs.npmjs.com/misc/scripts).
 
 ### Development server
 
-Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change
-any of the source files.
+Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. \
+The app will automatically reload if you change any of the source files.
 
 ### Code scaffolding
 
 Run `npm run generate -- component <name>` to generate a new component. You can also use
 `npm run generate -- directive|pipe|service|class|module`.
 
-If you have installed [angular-cli](https://github.com/angular/angular-cli) globally with `npm install -g @angular/cli`,
-you can also use the command `ng generate` directly.
+If you have installed [angular-cli](https://github.com/angular/angular-cli) globally with `npm install -g @angular/cli`, you can also use the command `ng generate` directly.
 
 ### PWA Service worker support
 
