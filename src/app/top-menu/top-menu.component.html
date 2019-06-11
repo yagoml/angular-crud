@@ -1,3 +1,8 @@
-<div class="top-menu">
-    <strong><a id="base" [routerLink]="['']" title="Voltar para Base de Clientes">Base de Clientes</a> | <a id="add" [routerLink]="['/add']" title="Adicionar Novo Cliente na Base">Novo Cliente</a></strong>
+<div class="row top-menu">
+    <div class="col-lg-9 col-md-7 col-sm-6 col-xs-12">
+        <strong><a id="base" [routerLink]="['']" title="Voltar para Base de Clientes">Base de Clientes</a> | <a id="add" [routerLink]="['/add']" title="Adicionar Novo Cliente na Base">Novo Cliente</a></strong>
+    </div>
+    <div class="col-lg-3 col-md-5 col-sm-6 col-xs-12">
+        <input type="text" placeholder="Filtrar por: nome, endereço ou veículo" (keyup)="changeFilter($event)" title="Basta digitar e os clientes são filtrados instantaneamente." class="form-control">
+    </div>
 </div>
