@@ -28,6 +28,9 @@ Caso existam dados inválidos ou não preenchido, será alertado abaixo de cada 
 Rota: **/** \
 Para excluir um cliente, clicar no link `Excluir`, que fica na coluna `Ações`, na sua respectiva linha da tabela, confirmar a exclusão apertando `OK` no popup de confirmação.
 
+### Filtro de Clientes
+Digitar no campo que fica no menu superior a direita, texto ou parte do texto para busca, onde será filtrado pelo nome, endereço ou veículo.
+
 _________________________________________________________________________________________________________
 
 ## Angular CRUD (EN-US)
